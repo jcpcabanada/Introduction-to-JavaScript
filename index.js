@@ -124,26 +124,26 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 
 function hungryDog(lbs,yrs){
   /*add your code here*/
-  if (yrs >= 1 && lbs <=5){
-    return lbs * .05;
+  if (yrs >= 1 && lbs <= 5){
+    return lbs * 0.05;
   }
-    else if(yrs >= 1 && lbs >=6 && lbs <=10){
-      return lbs * .04;
+    else if(yrs >= 1 && lbs >= 6 && lbs <= 10){
+      return lbs * 0.04;
     }
-    else if(yrs >= 1 && lbs >=11 && lbs <=15){
-      return lbs * .03;
+    else if(yrs >= 1 && lbs >= 11 && lbs <= 15){
+      return lbs * 0.03;
     }
-    else if(yrs >= 1 && lbs >=15){
-      return lbs * .02;
+    else if(yrs >= 1 && lbs >= 15){
+      return lbs * 0.02;
     }
-    else if(yrs <=1 && lbs >= 0.583){
-      return lbs * .04;
+    else if(yrs <=1 && yrs >= 0.583){
+      return lbs * 0.04;
     }
-    else if(age < 0.583 && age >= 0.333){
-      return lbs * .05;
+    else if(yrs <= 7 / 12 && yrs >= 4 / 12){
+      return lbs * 0.05;
     }
-    else if(age < 0.333){
-      return lbs * .10;
+    else if(yrs < 4 / 12){
+      return lbs * 0.10;
     }
 }
 console.log('TASK 3', hungryDog(45,4),'lbs.')
@@ -170,40 +170,40 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.random();
+let  computer = Math.random();
 
 if (computer <= 0.34){
-  computer = 'Rock';
+  computer = 'rock';
 }
   else if (computer <= 0.67){
-    computer = 'Paper';
+    computer = 'paper';
   }
   else if (computer > 0.67){
-    computer = 'Scissors';
+    computer = 'scissors';
   }
 
 function game(user, computer){
   /*add your code here*/
   if(user === computer){
-    return 'Its a tie';
+    return `it's a tie`;
   }
-    else if (user === 'Rock' && computer === 'Scissors'){
-      return 'You Win';
+    else if (user === 'rock' && computer === 'scissors'){
+      return "you win!";
     }
-    else if (user === 'Paper' && computer === 'Rock'){
-      return 'You Win';
+    else if (user === 'paper' && computer === 'rock'){
+      return "you win!";
     }
-    else if (user === 'Scissors' && computer === 'Paper'){
-      return 'You Win';
+    else if (user === 'scissors' && computer === 'paper'){
+      return "you win!";
     }
-    else if (user === 'Paper' && computer === 'Scissors'){
-      return 'You Lose';
+    else if (user === 'paper' && computer === 'scissors'){
+      return "you lose!";
     }
-    else if (user === 'Rock' && computer === 'Paper'){
-      return 'You Lose';
+    else if (user === 'rock' && computer === 'paper'){
+      return "you lose!";
     }
-    else if (user === 'Scissors' && computer === 'Rock'){
-      return 'You Lose';
+    else if (user === 'scissors' && computer === 'rock'){
+      return "you lose!";
     }
 }
 console.log('TASK 4:', game('Rock',computer));
@@ -222,7 +222,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km * 0.621;
+  return km * 0.621371;
 }
 console.log('TASK 5a:', miles(5), 'miles');
 
@@ -277,13 +277,13 @@ function grade(num){
   if (num >= 90){
     return 'you got an A';
   }
-    else if(num < 90 || num >= 80){
+    else if(num < 90 && num >= 80){
       return 'you got a B';
     }
-    else if(num < 80 || num >= 70){
+    else if(num < 80 && num >= 70){
       return 'you got a C';
     }
-    else if(num < 70 || num >= 60){
+    else if(num < 70 && num >= 60){
       return 'you got a D';
     }
     else if(num < 60 ){
